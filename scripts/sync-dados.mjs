@@ -92,7 +92,9 @@ for(const item of paresDeOrigemDestino) {
 
     //cpsync já cria as pastas
     fs.cpSync(origem, destino, {
+        //recursive garante que ele pegue os subdiretórios internos de cada caminho
         recursive: true,
+        //filtra para so pegar o que é diretorio
         filter: (src) => {
             return fs.statSync(src).isDirectory() || src.trim().toLowerCase().endsWith(".pdf");
         }
