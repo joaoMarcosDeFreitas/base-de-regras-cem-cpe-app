@@ -1,5 +1,5 @@
 //define as propriedades do texto, o que pode ser passado como parâmetros
-interface TextProps {
+export interface TextProps {
     tag: 'h1' | 'h2' | 'h3' | 'p'
     content: string;
     color?: string;
